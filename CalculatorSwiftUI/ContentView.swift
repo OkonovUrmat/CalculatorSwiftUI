@@ -39,7 +39,7 @@ struct ContentView: View {
                         }
                     }
                 }
-            }
+            }.padding(.bottom)
         }
     }
 }
