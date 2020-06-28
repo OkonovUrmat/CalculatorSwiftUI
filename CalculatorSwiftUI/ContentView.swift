@@ -17,7 +17,7 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             Color.black.edgesIgnoringSafeArea(.all)
             VStack {
                 ForEach(buttons, id: \.self) { row in
