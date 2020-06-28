@@ -8,6 +8,14 @@
 
 import SwiftUI
 
+enum CalculatorButton {
+    
+    case zero, one, two, three, four, five, six
+    case equals, plus, minus, multiply, divide
+    case ac, plusMinus, percent
+    
+}
+
 struct ContentView: View {
     let buttons = [
         ["7", "8", "9", "X"],
