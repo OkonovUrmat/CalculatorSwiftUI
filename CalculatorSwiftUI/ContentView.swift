@@ -20,6 +20,13 @@ struct ContentView: View {
         ZStack(alignment: .bottom) {
             Color.black.edgesIgnoringSafeArea(.all)
             VStack {
+                
+                HStack {
+                    Spacer()
+                    Text("42").foregroundColor(.white)
+                        .font(.system(size: 64))
+                }.padding()
+                
                 ForEach(buttons, id: \.self) { row in
                     HStack {
                         ForEach(row, id: \.self) { button in
