@@ -41,7 +41,7 @@ enum CalculatorButton: String {
     
     var backgroundColor: Color {
         switch self {
-        case .zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine:
+        case .zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .decimal:
             return Color(.darkGray)
         case .ac, .plusMinus, .percent:
             return Color(.lightGray)
