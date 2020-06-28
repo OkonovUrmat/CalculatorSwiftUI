@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color.black
+            Color.black.edgesIgnoringSafeArea(.all)
             VStack {
                 ForEach(buttons, id: \.self) { row in
                     HStack {
