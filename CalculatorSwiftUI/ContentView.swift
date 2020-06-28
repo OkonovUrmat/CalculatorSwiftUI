@@ -19,7 +19,7 @@ struct ContentView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             Color.black.edgesIgnoringSafeArea(.all)
-            VStack {
+            VStack(spacing: 12) {
                 
                 HStack {
                     Spacer()
