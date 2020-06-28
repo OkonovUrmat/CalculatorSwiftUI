@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum CalculatorButton {
+enum CalculatorButton: String {
     
     case zero, one, two, three, four, five, six
     case equals, plus, minus, multiply, divide
@@ -17,11 +17,8 @@ enum CalculatorButton {
 }
 
 struct ContentView: View {
-    let buttons = [
-        ["7", "8", "9", "X"],
-        ["4", "5", "6", "-"],
-        ["1", "2", "3", "+"],
-        ["0", ".", ".", "="]
+    let buttons: [[CalculatorButton]] = [
+        [.one, .two, .three, .plus]
     ]
     
     var body: some View {
@@ -38,7 +35,7 @@ struct ContentView: View {
                 ForEach(buttons, id: \.self) { row in
                     HStack(spacing: 12) {
                         ForEach(row, id: \.self) { button in
-                            Text(button)
+                            Text(button.rawValue)
                                 .font(.system(size: 32))
                                 .frame(width: self.buttonWidth(), height: self.buttonWidth())
                                 .foregroundColor(.white)
