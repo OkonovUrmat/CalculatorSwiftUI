@@ -58,6 +58,9 @@ class GlobalEnvironment: ObservableObject {
 }
 
 struct ContentView: View {
+    
+    @EnvironmentObject var env: GlobalEnvironment
+    
     let buttons: [[CalculatorButton]] = [
         [.ac, .plusMinus, .percent, .divide],
         [.seven, .eight, .nine, .multiply],
@@ -73,7 +76,7 @@ struct ContentView: View {
                 
                 HStack {
                     Spacer()
-                    Text("42").foregroundColor(.white)
+                    Text(env.display).foregroundColor(.white)
                         .font(.system(size: 64))
                 }.padding()
                 
