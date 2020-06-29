@@ -54,7 +54,12 @@ enum CalculatorButton: String {
 // Env object
 // Global Application State
 class GlobalEnvironment: ObservableObject {
+    
     @Published var display = ""
+    
+    func receiveInput(calculatorButton: CalculatorButton) {
+        self.display = calculatorButton.title
+    }
 }
 
 struct ContentView: View {
@@ -85,7 +90,7 @@ struct ContentView: View {
                         ForEach(row, id: \.self) { button in
                             
                             Button(action: {
-                                self.env.display = button.title
+                                self.env.receiveInput(calculatorButton: button)
                             }) {
                                 Text(button.title)
                                     .font(.system(size: 32))
