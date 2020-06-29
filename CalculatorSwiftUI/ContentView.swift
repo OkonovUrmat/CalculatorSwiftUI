@@ -51,6 +51,12 @@ enum CalculatorButton: String {
     }
 }
 
+// Env object
+// Global Application State
+class GlobalEnvironment: ObservableObject {
+    @Published var display = ""
+}
+
 struct ContentView: View {
     let buttons: [[CalculatorButton]] = [
         [.ac, .plusMinus, .percent, .divide],
