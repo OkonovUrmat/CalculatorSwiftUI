@@ -85,7 +85,7 @@ struct ContentView: View {
                         ForEach(row, id: \.self) { button in
                             
                             Button(action: {
-                                
+                                self.env.display = button.title
                             }) {
                                 Text(button.title)
                                     .font(.system(size: 32))
