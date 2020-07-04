@@ -106,6 +106,14 @@ struct CalculatorButtonView: View {
     var body: some View {
         Button(action: {
             self.env.receiveInput(calculatorButton: self.button)
+            
+            switch(self.button) {
+            case .plus: print("plus")
+            case .minus: print("minus")
+            case .multiply: print("multiply")
+            case .divide: print("divide")
+            default: print("default")
+            }
         }) {
             Text(button.title)
                 .font(.system(size: 32))
