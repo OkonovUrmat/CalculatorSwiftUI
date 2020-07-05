@@ -112,6 +112,11 @@ struct CalculatorButtonView: View {
             case .minus: print("minus")
             case .multiply: print("multiply")
             case .divide: print("divide")
+            case .plusMinus: print("plusMinus")
+            case .decimal: print("decimal")
+            case .equals: print("equals")
+            case .ac: print("AC")
+            case .percent: print("percent")
             default: print("default")
             }
         }) {
